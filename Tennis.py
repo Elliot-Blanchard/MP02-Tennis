@@ -147,6 +147,17 @@ def Lancement():
             joueurEnCours = listeJoueurs[i]
             joueurEnCours.affronte()
             listeJoueurs[i] = joueurEnCours
+def triselection(tab):
+    n=len(tab)
+    for i in range (n):
+        indiceMin=i
+        for j in range (i+1,n-1):
+            if tab[j]<tab[indiceMin]:
+                indiceMin=j
+        if indiceMin!=i:
+            tab[indiceMin],tab[i] = tab[i], tab[indiceMin]
+    return tab
 ordi = ORDI()
+
         
     
